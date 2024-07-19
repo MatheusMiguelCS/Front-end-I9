@@ -7,46 +7,50 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="image/icone_logo.ico" type="image/x-icon">
 </head>
 
-<nav class="navbar fixed-top" style="background-color: #1f84d6; width: 100%;">
-    <img src="image/i9logo.png" alt="i9logofail" style="margin-left: 5%;">
+<nav class="navbar fixed-top">
+    <img src="image/i9logo.png" alt="i9logofail">
 </nav>
 
-<body style="background-color: rgb(228, 232, 240);">      
+<body id="bodylogin">      
 <center>
-    <form action="" method="POST" class="formlogin" style="box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
-        <div class="flex" style="display: flex; margin-left: 15%;">
-            <i class="bi bi-person-fill" style="font-size: 32px;"></i><p style="font-size: 20px; margin-top: 8px; margin-left: 5px;"><b>Login Adiministrativo</b></p>
+    <form action="" method="POST" id="formlogin">
+        
+        <div id="flex">
+            <i class="bi bi-person-fill"></i><p><b>Login Adiministrativo</b></p>
         </div>
         
-        <div class="form-floating mb-3"">
-            <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Digite o seu email :" style="box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); margin-top: 20px;">
+        <div class="form-floating mb-3">
+            <input class="form-control" type="email" name="usuario" id="usuario" placeholder="Digite o seu email :" required> 
             <label for="usuario">E-mail :</label>
             
         </div>
+        
         <div class="senha_wrp">
             <div class="form-floating mb-3">
-                <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha :" style="box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
+                <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha :" required>
                 <label for="senha">Senha :</label>
                 
-                <button type="button" id="versenha"><i class="bi bi-eye" id="pw_icon"></i></button>
+                <button type="button" id="versenha_btn"><i class="bi bi-eye" id="versenha_icon"></i></button>
             </div>
         </div>
-        <button type="submit" class="btn" style="width: 120px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); margin-top: 20px; background-color: #1f84d6; color: white;">Entrar</button>
+        <button type="submit" class="btn" id="btn_submit">Entrar</button>
+
     </form> 
 </center>        
+    
     <script>
-        const show_pw_button = document.querySelector("#versenha")
-        const show_pw_icon = document.querySelector("#pw_icon")
-        const pw_input = document.querySelector("#senha") 
+        const versenha_btn = document.querySelector("#versenha_btn")
+        const versenha_icon = document.querySelector("#versenha_icon")
+        const senha = document.querySelector("#senha") 
 
-        show_pw_button.addEventListener('click', () => {
-            pw_input.type = pw_input.type === 'password' ? 'text' : 'password'  
-            show_pw_icon.classList = show_pw_icon.className.includes('bi bi-eye-slash') ? 'bi bi-eye' : 'bi bi-eye-slash'
+        versenha_btn.addEventListener('click', () => {
+            senha.type = senha.type === 'password' ? 'text' : 'password'  
+            versenha_icon.classList = versenha_icon.className.includes('slash') ? 'bi bi-eye' : 'bi bi-eye-slash'
         })
     </script>     
-</body>
-    
+</body>    
 </html>
