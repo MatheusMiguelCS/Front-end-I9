@@ -11,11 +11,39 @@
     <link rel="shortcut icon" href="image/icone_logo.ico" type="image/x-icon">
 </head>
 
+<style>
+    #bodyhistorico {
+        margin-top: 10%;
+        background-color: rgb(228, 232, 240);      
+    }
+    #cardbox > h1 {
+        margin-left: 35%;
+    }
+    .dropdown {
+        color: #1f84d6;
+        margin-left: 1%;
+    }
+    .dropdown-content {
+        color: black;
+        display: none;
+        background-color: #f9f9f9;
+        position: relative;
+        width: 225px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        font-size: medium;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+
 <nav class="navbar fixed-top">
     <img src="image/i9logo.png" alt="i9logofail">
 </nav>
 
 <body class="container" id="bodyhistorico">      
+    
     <div class="card card-body mt-5" id="cardbox">
         
         <h1>Histórico de usuário</h1>
@@ -24,8 +52,8 @@
             <label for="input-busca" style="font-size: 26px;">O que você procura ?</label>
             <div class="dropdown"><i class="bi bi-info-circle" style="font-size: 26px;"></i>
                 <div class="dropdown-content">
-                    <p> <p>Opções de Procura :</p> <b>ID;</b> <br> <b>Movimentação;</b> <br> <b>Data da Movimentação;</b> <br> <b>Funcionário Responsável;</b><br> 
-                    <b>ID Funcionário;</b></p>
+                    <p> <p>Opções de Procura :</p><b>ID Funcionário;</b> <br> <b>Funcionário Responsável;</b> <br> <b>Movimentação;</b> <br> <b>Data da Movimentação;</b> <br> <br> 
+                    </p>
                 </div>
             </div>
         </div>
@@ -34,46 +62,41 @@
         <table class="table table-hover table-striped">
             <thead style="background-color: #1f84d6; color: white;">
                 <tr>
-                    <th>ID</th>
+                    <th>ID Funcionário</th>
+                    <th>Funcionário Responsável</th>
                     <th>Movimentação</th>
                     <th>Data da Movimentação</th>
-                    <th>Funcionário Responsável</th>
-                    <th>ID Funcionário</th>
                 </tr>
             </thead>
             <tbody id="tabela-historico">
                 <tr>
-                    <td>1</td>
+                    <td>0001</td>
+                    <td>Gustavo Macedo Pilte</td>
                     <td>Alterou o nome do colaborador pois estava errado.</td>
                     <td>14/09/2024</td>
-                    <td>Gustavo Macedo Pilte</td>
-                    <td>0001</td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td>Incrementou o nome do colaborador pois estava faltando.</td>
-                    <td>15/10/2024</td>
-                    <td>Pedro Rodrigues</td>
                     <td>0002</td>
+                    <td>Pedro Rodrigues</td>
+                    <td>Incrementou o nome do colaborador pois estava faltando.</td>
+                    <td>15/10/2024</td>                 
                 </tr>
                 <tr>
-                    <td>3</td>
-                    <td>Deletou todos os aquivos do banco de dados.</td>
-                    <td>23/11/2024</td>
-                    <td>Bruno de Faria Sodré</td>
                     <td>0003</td>
+                    <td>Bruno de Faria Sodré</td>
+                    <td>Deletou todos os aquivos do banco de dados.</td>
+                    <td>23/11/2024</td>             
                 </tr>
                 <tr>
-                    <td>4</td>
-                    <td>Atualizou os registros dos colaboradores.</td>
-                    <td>14/09/2024</td>
-                    <td>Victor Hugo Marinhos</td>
                     <td>0004</td>
+                    <td>Victor Hugo Marinhos</td>
+                    <td>Atualizou os registros dos colaboradores.</td>
+                    <td>14/09/2024</td>                 
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
