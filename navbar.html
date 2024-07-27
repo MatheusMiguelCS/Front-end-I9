@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de usuário</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="image/icone_logo.ico" type="image/x-icon">
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+</head>
+<style>
+    body{
+        background-color: rgb(228, 232, 240);
+    }
+    .navbar {
+        background-color: #1f84d6;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    img {
+        margin-left: 5%;
+        size: 28px;
+    }
+
+    .dropdown {
+        background-color: white;
+        border-radius: 5px;
+        transition: 0.5s;
+        margin-left: -60%;
+    }
+
+    .dropdown:hover {
+        background-color: rgb(233, 232, 232);
+    }
+
+    .dropdown-item {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .dropdown-item:hover{
+        color: black;
+        background-color: whitesmoke;
+        text-decoration: none;
+    }
+
+    .dropdown-menu {
+        border-radius: 5px;
+    }
+    .text{
+        position: absolute;
+        margin-left: 75%;
+        color: white;
+        font-size: 20px;
+    }
+    .icon{
+        color: white;
+        font-size: 20px;
+    }
+    .bx-log-in{
+        background-color: #1f84d6;
+    }
+</style>
+<nav class="navbar navbar-expand-lg fixed-top">
+    <img src="image/i9logo.png" alt="i9logofail">
+    <div class="container-fluid">         
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Empresas
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Cadastrar Empresas</a>
+                <a class="dropdown-item" href="#">Listar Empresas</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Colaboradores
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Cadastrar Colaboradores</a>
+                <a class="dropdown-item" href="#">Listar Colaboradores</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Usuários
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Cadastrar Usuários</a>
+                <a class="dropdown-item" href="#">Listar Usuários</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contratos
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Cadastrar Contratos</a>
+                <a class="dropdown-item" href="#">Listar Contratos</a>
+            </div>
+        </div>           
+        <div class="text">
+            <h4>Seja bem vindo(a), funcionário <i class='bi bi-box-arrow-right' class="icon"></i></h4>
+            
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</nav>
+<body>
+    
+</body>    
+</html>

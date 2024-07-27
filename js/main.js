@@ -39,4 +39,7 @@ if(input_busca){
     })
 }
 
+$(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+});
 

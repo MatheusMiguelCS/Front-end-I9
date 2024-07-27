@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de usuário</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="image/icone_logo.ico" type="image/x-icon">
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+</head>
+<style>
+    body {
+        background-color: rgb(228, 232, 240);
+    }
+    form {
+        margin-top: 5%;
+    }
+    .card {
+        max-width: 50%;
+        margin-left: 25%;
+        border-radius: 5px;
+        padding: 10px 40px 40px 40px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    .card > h1 {
+        text-align: center;
+    }
+    .card > b > p{
+        font-size: 20px;
+    }
+    .form-control {
+        font-size: 16px;
+        box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+    }
+    .form-control::placeholder {
+        font-size: 18px;
+    }
+    .form-floating > label {
+        font-size: 16px;
+    }
+    #enviar {
+        border: none;
+        box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+        border-radius: 5px;
+        height: 40px;
+        background-color: #1f84d6;
+        color: white;
+        font-size: 16px;
+        opacity: 0.6;
+        transition: 1s;
+    }
+    #enviar:hover {
+        opacity: 1;
+    }
+    .navbar {
+        background-color: #1f84d6;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    img {
+        margin-left: 5%;
+        size: 28px;
+    }
+
+    .dropdown {
+        background-color: white;
+        border-radius: 5px;
+        transition: 0.5s;
+        margin-left: -60%;
+    }
+
+    .dropdown:hover {
+        background-color: rgb(233, 232, 232);
+    }
+
+    .dropdown-item {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .dropdown-item:hover{
+        color: black;
+        background-color: whitesmoke;
+        text-decoration: none;
+    }
+
+    .dropdown-menu {
+        border-radius: 5px;
+    }
+    .text{
+        position: absolute;
+        margin-left: 75%;
+        color: white;
+        font-size: 20px;
+    }
+    .icon{
+        color: white;
+        font-size: 20px;
+    }
+    .bx-log-in{
+        background-color: #1f84d6;
+    }
+</style>
+<nav class="navbar navbar-expand-lg fixed-top">
+    <img src="image/i9logo.png" alt="i9logofail">
+    <div class="container-fluid">         
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Empresas
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Cadastrar Empresas</a>
+                <a class="dropdown-item" href="#">Listar Empresas</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Colaboradores
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Cadastrar Colaboradores</a>
+                <a class="dropdown-item" href="#">Listar Colaboradores</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Usuários
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Cadastrar Usuários</a>
+                <a class="dropdown-item" href="#">Listar Usuários</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contratos
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Cadastrar Contratos</a>
+                <a class="dropdown-item" href="#">Listar Contratos</a>
+            </div>
+        </div>           
+        <div class="text">
+            <h4>Seja bem vindo(a), funcionário <i class='bi bi-box-arrow-right' class="icon"></i></h4>
+            
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</nav>
+<body>
+    <form action="" style="margin-top: 5%;">
+        <div class="card card-body mt-5">
+            <h1>Cadastro de Empresas</h1>
+            <b><p>Dados empresa :</p></b>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-5">
+                        <input style="height: 50px;" class="form-control" type="text" name="cnpj" id="cnpj" placeholder="CNPJ :" required>
+                        <label for="cnpj">CNPJ :</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-5">
+                        <input style="height: 50px;" class="form-control" type="text" name="nome_empresa" id="nome_empresa" placeholder="Nome da Empresa :" required>
+                        <label for="nome_empresa">Nome da Empresa : </label>
+                    </div>
+                </div>
+            </div>
+            <b><p>Endereço Da Empresa :</p></b>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input style="height: 50px;" class="form-control" type="text" name="cep" id="cep" placeholder="CEP :" required>
+                        <label for="cep">CEP :</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input style="height: 50px;" class="form-control" type="text" name="cidade" id="cidade" placeholder="Cidade :" required>
+                        <label for="cidade">Cidade : </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input style="height: 50px;" class="form-control" type="text" name="estado" id="estado" placeholder="Estado :" required>
+                        <label for="estado">Estado : </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-5">
+                        <input style="height: 50px;" class="form-control" type="text" name="endereco" id="endereco" placeholder="Endereco :" required>
+                        <label for="endereco">Endereço :</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-5">
+                        <input style="height: 50px;" class="form-control" type="text" name="complemento" id="complemento" placeholder="Complemento :" required>
+                        <label for="complemento">Complemento : </label>
+                    </div>
+                </div>
+            </div>
+            <b><p>Contatos :</p></b>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-5">
+                        <input style="height: 50px;" class="form-control" type="text" name="email" id="email" placeholder="Email :" required>
+                        <label for="email">Email :</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-5">
+                        <input style="height: 50px;" class="form-control" type="text" name="telefone" id="telefone" placeholder="Telefone :" required>
+                        <label for="telefone">Telefone : </label>
+                    </div>
+                </div>
+            </div>
+            <center><button type="submit" style="width: 200px;" nome="enviar" id="enviar">Enviar</button></center>
+        </div>
+    </form>
+</body>    
+</html>
