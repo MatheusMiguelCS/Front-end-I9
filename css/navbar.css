@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(228, 232, 240);
+}
+
+img {
+    margin-left: 5%;
+    size: 28px;
+}
+
+.navbar {
+    background-color: #1f84d6;
+    width: 100%;
+    border-radius: 0px;
+}
+
+.dropdown {
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin-left: -60%;
+}
+
+.dropdown:hover {
+    background-color: rgb(233, 232, 232);
+}
+
+.dropdown-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.dropdown-item:hover{
+    color: black;
+    background-color: whitesmoke;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    border-radius: 5px;
+}
+.text{
+    position: absolute;
+    margin-left: 75%;
+    color: white;
+    font-size: 20px;
+}
+.icon{
+    color: white;
+    font-size: 20px;
+}
+.bx-log-in{
+    background-color: #1f84d6;
+}

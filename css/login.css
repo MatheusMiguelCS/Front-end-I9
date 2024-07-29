@@ -1,0 +1,70 @@
+.navbar {
+    background-color: #1f84d6;
+    width: 100%;
+    border-radius: 0px;
+    position: absolute;
+}
+img {
+    margin-left: 5%;
+    size: 28px;
+}
+body {
+    background-color: rgb(228, 232, 240);
+}
+form{
+    margin-top: 15%; 
+    align-items: center;
+    background-color: white;
+    min-height: 23%;
+    max-width: 23%;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+#flex {
+    display: flex;
+    margin-left: 15%;
+    position: relative;
+}
+#flex > i {
+    font-size: 32px;
+}
+#flex > p {
+    font-size: 20px; 
+    margin-top: 8px; 
+    margin-left: 5px;
+}
+#usuario {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); 
+    margin-top: 20px;
+}
+#senha {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin-top: 20px;
+}
+#btn_submit {
+    width: 50%; 
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); 
+    margin-top: 20px; 
+    background-color: #1f84d6;
+    color: white;
+}
+#versenha_btn {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+}
+#versenha > i {
+    width: 100%;
+    height: auto;
+}
+.senha_wrp {
+    position: relative;
+}

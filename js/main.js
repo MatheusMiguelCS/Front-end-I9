@@ -1,3 +1,4 @@
+// VER SENHA / ARQUIVO LOGIN 
 const versenha_btn = document.querySelector('#versenha_btn')
 const versenha_icon = document.querySelector('#versenha_icon')
 const senha = document.querySelector('#senha') 
@@ -9,7 +10,7 @@ if(versenha_btn){
     })
 }
 
-
+// PESQUISA RESPONSIVA / ARQUIVO HISTORICO_USUARIO 
 const input_busca = document.querySelector('#input-busca');
 const tabela_historico = document.querySelector('#tabela-historico');
 
@@ -39,7 +40,60 @@ if(input_busca){
     })
 }
 
+// DROPDOWN NAVBAR / ARQUIVO NAVBAR 
 $(document).ready(function () {
     $('.dropdown-toggle').dropdown();
 });
+
+// STEP FORM / ARQUIVO CADASTRO_COLABORADOR 
+const prevBtns = document.querySelectorAll(".btn-prev");
+const nextBtns = document.querySelectorAll(".btn-next");
+const progress = document.getElementById("progress");
+const formSteps = document.querySelectorAll(".form-step");
+const progressSteps = document.querySelectorAll(".progress-step");
+
+let formStepsNum = 0;
+
+if(nextBtns) {
+    nextBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            formStepsNum++;
+            updateFormSteps();
+            updateProgressbar();
+        });
+    });
+}
+
+if(prevBtns){
+    prevBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            formStepsNum--;
+            updateFormSteps();
+            updateProgressbar();
+        });
+    });
+}
+
+function updateFormSteps() {
+    formSteps.forEach((formStep) => {
+        formStep.classList.contains("form-step-active") &&
+        formStep.classList.remove("form-step-active");
+    });
+    formSteps[formStepsNum].classList.add("form-step-active");
+}
+
+function updateProgressbar() {
+    progressSteps.forEach((progressStep, idx) => {
+        if (idx < formStepsNum + 1) {
+            progressStep.classList.add("progress-step-active");
+        } else {
+            progressStep.classList.remove("progress-step-active");
+        }
+});
+
+const progressActive = document.querySelectorAll(".progress-step-active");
+
+progress.style.width =
+    ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+}
 
