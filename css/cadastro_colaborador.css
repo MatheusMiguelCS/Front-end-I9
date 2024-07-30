@@ -8,7 +8,7 @@ form {
     max-width: 50%;
     margin-left: 25%;
     border-radius: 5px;
-    padding: 10px 50px 50px 50px;
+    padding: 10px 60px 50px 50px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 .card > h1 {
@@ -97,8 +97,10 @@ form {
     content: attr(data-title);
     position: absolute;
     top: calc(100% + 0.5rem);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: black;
+    width: 400px;
+    text-align: center;
 }
 
 .progress-step-active {
@@ -126,6 +128,7 @@ form {
     opacity: 0.8;
     margin-left: auto;
     width: 15%;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
 }
 
 .btn-enviar:hover {
@@ -149,7 +152,7 @@ form {
     transition: 0.5s;
     opacity: 0.8;
     width: 15%;
-
+    box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
 }
 
 .btn-prev:hover {
@@ -170,6 +173,7 @@ form {
     transition: 0.5s;
     opacity: 0.8;
     width: 15%;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
 }
 
 .btn-next:hover {

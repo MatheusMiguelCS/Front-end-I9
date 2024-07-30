@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histórico de usuário</title>
+    <title>Cadastro de Colaborador</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -17,30 +17,94 @@
 <body>
     <form action="" style="margin-top: 5%;">
         <div class="card card-body mt-5">
-            <h1>Cadastro de Empresas</h1>
+            <h1>Ficha de Registro de Empregado</h1>
+            <br>
+            <p style="font-size: 1.75rem;">Preencha com os dados do empregado :</p>
             <div class="progressbar">
                 <div class="progress" id="progress"></div>
-                <div class="progress-step progress-step-active" data-title="Empresa"></div>
+                <div class="progress-step progress-step-active" data-title="Pessoais"></div>
                 <div class="progress-step" data-title="Endereço"></div>
-                <div class="progress-step" data-title="Contato"></div>
+                <div class="progress-step" data-title="Documentos"></div>
+                <div class="progress-step" data-title="Complementares"></div>
+                <div class="progress-step" data-title="Banco"></div>
+                <div class="progress-step" data-title="Profissão"></div>
+                <div class="progress-step" data-title="Registro"></div>
             </div>
 
             <div class="form-step form-step-active">  
                 <div class="row">
                     <div class="col">
                         <div class="form-floating mb-5">
-                            <input style="height: 50px;" class="form-control" type="text" name="cnpj" id="cnpj" placeholder="CNPJ :" required>
-                            <label for="cnpj">CNPJ :</label>
+                            <input style="height: 50px;" class="form-control" type="text" name="nome" id="nome" placeholder="Nome Empregado :" required>
+                            <label for="nome">Nome Empregado :</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="nome_pai" id="nome_pai" placeholder="Nome do Pai :" required>
+                            <label for="nome_pai">Nome  do Pai : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="nome_mae" id="nome_mae" placeholder="Nome da Mãe :" required>
+                            <label for="nome_mae">Nome da Mãe : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px; font-weight: 700;" class="form-control" type="date" name="nascimento" id="nascimento" required>
+                            <label for="nome_mae">Nascimento :</label>
+                        </div>
+                    </div>
+                    <div class="col">                       
+                        <select class="form-select form-select-lg mb-5" name="sexo" id="sexo" style="height: 50px; font-size: 1.5rem; font-weight: 750;">
+                            <option selected>Selecione o Sexo :</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>                        
+                    </div>
+                    <div class="col">
+                        <select class="form-select form-select-lg mb-5"  name="estado_civil" id="estado_civil" style="height: 50px; font-size: 1.5rem; font-weight: 750;">
+                            <option selected>Estado Civil :</option>
+                            <option value="casado">Casado</option>
+                            <option value="solteiro">Solteiro</option>
+                            <option value="separado">Separado</option>
+                            <option value="divorciado">Divorciado</option>
+                            <option value="viuvo">Viúvo</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select form-select-lg mb-5"  name="raca" id="raca" style="height: 50px; font-size: 1.5rem; font-weight: 750;">
+                            <option selected>Raça/Cor :</option>
+                            <option value="branco">Branco</option>
+                            <option value="preto">Preto</option>
+                            <option value="pardo">Pardo</option>
+                            <option value="indigena">Indígena</option>
+                            <option value="viuvo">Não Informado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="naturalidade" id="naturalidade" placeholder="naturalidade :" required>
+                            <label for="naturalidade">Naturalidade :</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-floating mb-5">
-                            <input style="height: 50px;" class="form-control" type="text" name="nome_empresa" id="nome_empresa" placeholder="Nome da Empresa :" required>
-                            <label for="nome_empresa">Nome da Empresa : </label>
+                            <input style="height: 50px;" class="form-control" type="text" name="nacionalidade" id="nacionalidade" placeholder="nacionalidade :" required>
+                            <label for="nacionalidade">Nacionalidade :</label>
                         </div>
-                    </div>
+                    </div>                        
                 </div>
-                
                 <div class="btns-group">
                     <a href="#" class="btn-next" style="margin-left: auto;">Avançar</a>
                 </div>
@@ -49,60 +113,276 @@
             <div class="form-step">
                 <div class="row">
                     <div class="col">
-                        <div class="form-floating mb-3">
+                        <div class="form-floating mb-5">
                             <input style="height: 50px;" class="form-control" type="text" name="cep" id="cep" placeholder="CEP :" required>
                             <label for="cep">CEP :</label>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="form-floating mb-3">
-                            <input style="height: 50px;" class="form-control" type="text" name="cidade" id="cidade" placeholder="Cidade :" required>
-                            <label for="cidade">Cidade : </label>
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="bairro" id="bairro" placeholder="Bairro :" required>
+                            <label for="bairro">Bairro : </label>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="form-floating mb-3">
-                            <input style="height: 50px;" class="form-control" type="text" name="estado" id="estado" placeholder="Estado :" required>
-                            <label for="estado">Estado : </label>
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="municipio" id="municipio" placeholder="Município :" required>
+                            <label for="estado">Município : </label>
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col">
                         <div class="form-floating mb-5">
-                            <input style="height: 50px;" class="form-control" type="text" name="endereco" id="endereco" placeholder="Endereco :">
+                            <input style="height: 50px;" class="form-control" type="text" name="endereco" id="endereco" placeholder="Endereço :">
                             <label for="endereco">Endereço :</label>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="form-floating mb-5">
-                            <input style="height: 50px;" class="form-control" type="text" name="complemento" id="complemento" placeholder="Complemento :" required>
-                            <label for="complemento">Complemento : </label>
-                        </div>
-                    </div>
                 </div>
-                <center>
-                    <div class="btns-group">
-                        <a href="#" class="btn-prev">Voltar</a>
-                        <a href="#" class="btn-next">Avançar</a>
-                    </div>
-                </center>
+                <div class="btns-group">
+                    <a href="#" class="btn-prev">Voltar</a>
+                    <a href="#" class="btn-next">Avançar</a>
+                </div>
             </div>
             
             <div class="form-step">
                 <div class="row">
                     <div class="col">
                         <div class="form-floating mb-5">
-                            <input style="height: 50px;" class="form-control" type="text" name="email" id="email" placeholder="Email :" required>
-                            <label for="email">Email :</label>
+                            <input style="height: 50px;" class="form-control" type="text" name="cpf" id="cpf" placeholder="CPF :" required>
+                            <label for="cpf">CPF :</label>
                         </div>
-                    </div>
-                    
+                    </div>           
                     <div class="col">
                         <div class="form-floating mb-5">
-                            <input style="height: 50px;" class="form-control" type="text" name="telefone" id="telefone" placeholder="Telefone :" required>
-                            <label for="telefone">Telefone : </label>
+                            <input style="height: 50px;" class="form-control" type="text" name="rg" id="rg" placeholder="RG :" required>
+                            <label for="rg">RG : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="orgao" id="orgao" placeholder="Órgão :" required>
+                            <label for="orgao">Órgão : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="uf" id="uf" placeholder="UF :" required>
+                            <label for="uf">UF : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="date" name="emissao" id="emissao" placeholder="Emissão RG :" required>
+                            <label for="emissao">Emissão RG : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="ctps" id="ctps" placeholder="" required>
+                            <label for="ctps">Número CTPS :</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="serie_ctps" id="serie_ctps" placeholder="Série CTPS :" required>
+                            <label for="serie_ctps">Série CTPS : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="estado_ctps" id="estado_ctps" placeholder="UF CTPS :" required>
+                            <label for="estado_ctps">UF CTPS : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="date" name="expedicao_ctps" id="expedicao_ctps" placeholder="Expedição CTPS :" required>
+                            <label for="expedicao_ctps">Expedição CTPS : </label>
+                        </div>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="pis" id="pis" placeholder="PIS :" required>
+                            <label for="pis">PIS : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="cadastro_pis" id="cadastro_pis" placeholder="Cadastro PIS :" required>
+                            <label for="cadastro_pis">Cadastro PIS : </label>
+                        </div>
+                    </div>
+                </div>           
+                <div class="btns-group">
+                    <a href="#" class="btn-prev">Voltar</a>
+                    <a href="#" class="btn-next">Avançar</a>
+                </div>
+
+            </div>  
+            <div class="form-step">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="instrucao" id="instrucao" placeholder="Instrução :" required>
+                            <label for="instrucao">Instrução : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="cnh" id="cnh" placeholder="CNH :" required>
+                            <label for="cnh">CNH : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="categoria_cnh" id="categoria_cnh" placeholder="Categoria CNH :" required>
+                            <label for="categoria_cnh">Categoria CNH : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="date" name="validade_cnh" id="validade_cnh" placeholder="Validade CNH :" required>
+                            <label for="validade_cnh">Validade CNH : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="reservista" id="reservista" placeholder="Reservista :" required>
+                            <label for="reservista">Reservista : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="categoria" id="categoria" placeholder="Categoria :" required>
+                            <label for="categoria">Categoria : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="titulo_eleitoral" id="titulo_eleitoral" placeholder="Título Eleitoral :" required>
+                            <label for="titulo_eleitoral">Título Eleitoral : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="zona" id="zona" placeholder="Zona :" required>
+                            <label for="zona">Zona : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="secao" id="secao" placeholder="Seção:" required>
+                            <label for="zona">Seção : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns-group">
+                    <a href="#" class="btn-prev">Voltar</a>
+                    <a href="#" class="btn-next">Avançar</a>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="banco" id="banco" placeholder="Banco :" required>
+                            <label for="banco">Banco : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="conta" id="conta" placeholder="Conta :" required>
+                            <label for="conta">Conta : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="digito" id="digito" placeholder="Digito :" required>
+                            <label for="digito">Digito : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="agencia" id="agencia" placeholder="Agência :" required>
+                            <label for="agencia">Agência : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns-group">
+                    <a href="#" class="btn-prev">Voltar</a>
+                    <a href="#" class="btn-next">Avançar</a>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="sindicato" id="sindicato" placeholder="Sindicato :" required>
+                            <label for="sindicato">Sindicato : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="cons_profis" id="cons_profis" placeholder="Cons. Profis :" required>
+                            <label for="cons_profis">Cons. Profis : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="registro_profis" id="registro_profis" placeholder="Registro Profis :" required>
+                            <label for="registro_profis">Registro Profis :</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="date" name="data_registro" id="data_registro" placeholder="Data Registro :" required>
+                            <label for="data_registro">Data Registro : </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns-group">
+                    <a href="#" class="btn-prev">Voltar</a>
+                    <a href="#" class="btn-next">Avançar</a>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="codigo" id="codigo" placeholder="Código :" required>
+                            <label for="codigo">Código : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="recibo" id="recibo" placeholder="Nr. Recibo :" required>
+                            <label for="recibo">Nr. Recibo : </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <input style="height: 50px;" class="form-control" type="text" name="matricula_social" id="matricula_social" placeholder="Matrícula eSocial  :" required>
+                            <label for="matricula_social">Matrícula eSocial : </label>
                         </div>
                     </div>
                 </div>
@@ -110,8 +390,9 @@
                     <a href="#" class="btn-prev">Voltar</a>
                     <button class="btn-enviar" type="submit" nome="enviar" id="enviar">ENVIAR</button>
                 </div>
-            </div>    
+            </div>  
         </div>
+
         <script src="js/main.js"></script>
     </form>
 </body>    
