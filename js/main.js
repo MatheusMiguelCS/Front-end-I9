@@ -97,3 +97,26 @@ progress.style.width =
     ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
 
+//FORM EPI HIDE / ARQUIVO CADASTRO_COLABORADOR 
+const epi_form = document.querySelector("#form_epi");
+const epi_form2 = document.querySelector("#form_epi2");
+const sim_btn = document.querySelector("#sim_btn");
+const nao_btn = document.querySelector("#nao_btn")
+
+if(nao_btn){
+    nao_btn.addEventListener('click', () => {
+        epi_form.classList.remove("row")
+        epi_form.classList.add("row-hide")
+        epi_form2.classList.remove("row")
+        epi_form2.classList.add("row-hide")
+    }) 
+}
+
+if(sim_btn){
+    sim_btn.addEventListener('click', () => {
+        epi_form.classList.remove("row-hide")
+        epi_form.classList.add("row")
+        epi_form2.classList.remove("row-hide")
+        epi_form2.classList.add("row")
+    })
+}

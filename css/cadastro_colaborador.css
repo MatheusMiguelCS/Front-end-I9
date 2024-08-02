@@ -182,3 +182,7 @@ form {
     opacity: 1;
 }
 
+.row-hide{
+    display: none;
+}
+

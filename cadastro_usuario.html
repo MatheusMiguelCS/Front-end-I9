@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de usuário</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'/>
+    <link rel="stylesheet" href="css/cadastro_usuario.css">
+    <link rel="shortcut icon" href="image/icone_logo.ico" type="image/x-icon">
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+</head>
+
+<body>
+    <form action="">
+        <div class="card card-body mt-5">
+            <h1>Cadastro de Usuários :</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-4">
+                        <input style="height: 50px;" class="form-control" type="email" name="email" id="email" placeholder="Email :" required>
+                        <label for="email">Email :</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-4">
+                        <input style="height: 50px;" class="form-control" type="text" name="senha" id="senha" placeholder="Senha :" required>
+                        <label for="senha">Senha : </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <select class="form-select form-select-lg mb-5" name="perfil" id="perfil" style="height: 50px; font-size: 1.5rem; font-weight: 750;">
+                        <option selected>Perfil Usuário :</option>
+                        <option value="master">Master</option>
+                        <option value="cadastro">Somente Cadastro</option>
+                        <option value="visualizar">Somente Visualização</option>
+                        <option value="documentos">Somente Documentos</option>
+                    </select>
+                </div>
+            </div>     
+                
+            <center><button type="submit" style="width: 150px;" nome="enviar" id="enviar">Cadastrar</button></center>
+        </div>
+    </form>
+</body>
+
+</html>

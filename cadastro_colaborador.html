@@ -29,6 +29,7 @@
                 <div class="progress-step" data-title="Banco"></div>
                 <div class="progress-step" data-title="Profissão"></div>
                 <div class="progress-step" data-title="Registro"></div>
+                <div class="progress-step " data-title="EPI"></div>
             </div>
 
             <div class="form-step form-step-active">  
@@ -388,9 +389,77 @@
                 </div>
                 <div class="btns-group">
                     <a href="#" class="btn-prev">Voltar</a>
+                    <a href="#" class="btn-next">Avançar</a>
+                </div>
+            </div>
+            
+            <div class="form-step">
+                <div class="row">
+                    <div class="col">
+                        <center>
+                            <p style="font-size: 2rem">O empregado precisa de EPI ?</p>
+                            <div class="btn-group">                         
+                                
+                                <div class="botao">
+                                    <input class="btn-check" type="radio" name="radio" id="sim_btn" autocomplete="off" checked>
+                                    <label class="btn btn-primary" for="sim_btn">Sim</label>
+                                
+                                    <input class="btn-check" type="radio" name="radio" id="nao_btn" autocomplete="off">
+                                    <label class="btn btn-primary" for="nao_btn">Não</label>
+                                </div>                              
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                
+                <div class="row" id="form_epi">
+                    <p style="font-size: 1.8rem"><b>Selecione o tamanho :</b></p>
+                    <div class="col">
+                        <select class="form-select form-select-lg mb-5" name="japona" id="japona" style="height: 50px; font-size: 1.5rem; font-weight: 750;">
+                            <option selected>Japona :</option>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                            <option value="XG">XG</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select form-select-lg mb-5" name="calca" id="calca" style="height: 50px; font-size: 1.5rem; font-weight: 750;">
+                            <option selected>Calça :</option>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                            <option value="XG">XG</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="row" id="form_epi2">
+                    <p style="font-size: 1.8rem"><b>Selecione se necessário :</b></p>
+                    <div class="col">
+                        <select class="form-select form-select-lg mb-5" name="luva" id="luva" style="height: 50px; font-size: 1.5rem; font-weight: 750;">
+                            <option selected>Luva :</option>
+                            <option value="sim">SIM</option>
+                            <option value="nao">NÃO</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select form-select-lg mb-5" name="meiao" id="meiao" style="height: 50px; font-size: 1.5rem; font-weight: 750;">
+                            <option selected>Meião :</option>
+                            <option value="sim">SIM</option>
+                            <option value="nao">NÃO</option>
+                        </select>
+                    </div>
+                </div> 
+                
+                <div class="btns-group">
+                    <a href="#" class="btn-prev">Voltar</a>
                     <button class="btn-enviar" type="submit" nome="enviar" id="enviar">ENVIAR</button>
                 </div>
-            </div>  
+                
+            </div>
         </div>
 
         <script src="js/main.js"></script>
